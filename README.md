@@ -1,66 +1,87 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# README du projet
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Vue d'ensemble
+Ce projet est une application web basée sur Laravel intégrant un tableau de bord Windmill. L'application combine les puissantes capacités backend de Laravel avec l'interface utilisateur élégante et responsive du tableau de bord Windmill.
 
-## About Laravel
+## Stack technologique
+- **Laravel** - Framework d'application web PHP
+- **TailwindCSS** - Framework CSS utilitaire
+- **Alpine.js** - Framework JavaScript léger pour les interactions UI
+- **Windmill Dashboard** - Modèle de tableau de bord d'administration
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Installation
+### 1. Cloner le dépôt
+```sh
+git clone <URL_DU_DEPOT>
+cd <NOM_DU_PROJET>
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 2. Installer les dépendances PHP
+```sh
+composer install
+```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 3. Installer les dépendances JavaScript
+```sh
+npm install
+```
 
-## Learning Laravel
+### 4. Créer une copie du fichier d'environnement
+```sh
+cp .env.example .env
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 5. Générer la clé d'application
+```sh
+php artisan key:generate
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 6. Configurer la base de données
+Modifier le fichier `.env` pour définir les paramètres de connexion à la base de données.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 7. Exécuter les migrations
+```sh
+php artisan migrate
+```
 
-## Laravel Sponsors
+## Développement
+### 1. Démarrer le serveur de développement
+```sh
+php artisan serve
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 2. Surveiller les modifications et compiler les assets
+```sh
+npm run dev
+```
 
-### Premium Partners
+## Compilation pour la production
+Compiler les assets pour la production avec la commande :
+```sh
+npm run build
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Structure du projet
+- **app/** - Contient le code PHP de l'application
+- **config/** - Fichiers de configuration de l'application
+- **database/** - Migrations et seeders de la base de données
+- **resources/** - Fichiers de vue bruts et assets non compilés
+- **routes/** - Routes de l'application
+- **windmill/** - Templates et assets du tableau de bord Windmill
 
-## Contributing
+## Fonctionnalités
+- Mise en page responsive du tableau de bord
+- Bascule entre thème clair/sombre
+- Graphiques et tableaux interactifs
+- Authentification des utilisateurs
+- Barre de navigation latérale adaptée aux mobiles
+- Composants personnalisables
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Crédits
+- **Laravel** - Le Framework PHP pour les Artisans du Web
+- **Windmill UI** - Template HTML de tableau de bord avec TailwindCSS
+- **TailwindCSS** - Un framework CSS utilitaire
 
-## Code of Conduct
+## Licence
+Ce projet est sous licence MIT.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
